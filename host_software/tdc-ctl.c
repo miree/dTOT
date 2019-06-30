@@ -139,7 +139,7 @@ int main(int argc, char *argv[])
 	}
 
 	for (int ch = 0; ch < TDC_N_CHANNELS; ++ch) {
-		if (tdc && thresholds[ch] != -1) {
+		if (thresholds[ch] != -1) {
 			if (tdc == NULL) {
 				fprintf(stderr, "No device given, cannot set threshold. Use -h for help.\n");
 				return 1;
