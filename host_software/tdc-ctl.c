@@ -122,20 +122,28 @@ int main(int argc, char *argv[])
 		printf("device: %s\n", argv[optind]); 
 		tdc = tdc_open(argv[optind]);
 		if (!tdc) {
-			fprintf(stderr, "cannot open device %s\n", optarg);
+			fprintf(stderr, "Cannot open device %s\n", optarg);
 			return 1;
 		} else {
 			break;
 		}
 	} 
 
-	if (tdc && enable_pattern != -1) {
+	if (enable_pattern != -1) {
+		if (tdc == NULL) {
+			fprintf(stderr, "No device given, cannot send enable pattern. Use -h for help.\n");
+			return 1;
+		}
 		printf("enable pattern = %d\n", enable_pattern);
 		tdc_enable_channels(tdc, enable_pattern);
 	}
 
 	for (int ch = 0; ch < TDC_N_CHANNELS; ++ch) {
 		if (tdc && thresholds[ch] != -1) {
+			if (tdc == NULL) {
+				fprintf(stderr, "No device given, cannot set threshold. Use -h for help.\n");
+				return 1;
+			}
 			tdc_set_channel_threshold(tdc, ch, thresholds[ch]);
 		}
 	}
