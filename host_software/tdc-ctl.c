@@ -20,28 +20,6 @@ char* sample_to_text(unsigned char ch, unsigned long time, int edge)
 	return str_out;
 }
 
-
-int too_quickly2(double threshold_sec)
-{
-	static struct timespec then = {.tv_sec=0};
-	struct timespec now;
-	int result = clock_gettime(CLOCK_REALTIME, &now);
-
-	if (result == -1) {
-		return 1; // failure to get time is also "too quickly"
-	}
-
-	result = 0;
-	if (then.tv_sec != 0) {
-		double delta_t = now.tv_sec - then.tv_sec + 1e-9*(now.tv_nsec - then.tv_nsec);
-		if (delta_t < threshold_sec) {
-			result = 1;
-		}
-	}
-	then = now;
-	return result;
-}
-
 void print_help() {
 	printf("usage: tdc-ctl <device> [options]\n");
 	printf("\n");
