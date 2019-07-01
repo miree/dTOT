@@ -6,16 +6,30 @@
 
 char* sample_to_text(unsigned char ch, unsigned long time, int edge)
 {
-	static char str_out[9] = {0,};
-	for(int i = 0; i < 8; ++i) {
-		str_out[i] = (ch&0x80?'-':'_');
-		ch <<= 1;
+	static char str_out[4*9] = {0,};
+	for (int i = 0; i < 4*9; ++i) {
+		str_out[i] = 0;
 	}
-	int idx = time%8;
-	if (edge) {
-		str_out[idx]='/';
-	} else {
-		str_out[idx]='\\';
+	int str_idx = 0;
+	int edge_idx = time%8;
+	for(int i = 0; i < 8; ++i) {
+		if (i == edge_idx) {
+			if (edge) {
+				str_out[str_idx++]='/';
+			} else {
+				str_out[str_idx++]='\\';
+			}
+		} else {
+			if (ch&0x80) {
+				str_out[str_idx++] = 0xE2; 
+				str_out[str_idx++] = 0x80;
+				str_out[str_idx++] = 0xBE;
+			} else {
+				str_out[str_idx++] = '_'; 
+			}
+		}
+
+		ch <<= 1;
 	}
 	return str_out;
 }
@@ -155,15 +169,14 @@ int main(int argc, char *argv[])
 			if (event.channel == -1) {
 				break;
 			}
-			if (event.time < previous_time) {
-				printf("%d %d %20ld     sample=0x%02x:%s   dt=%ld\n",	
-					event.channel, 
-					event.edge, 
-					event.time, 
-					event.sample,
-					sample_to_text(event.sample, event.time, event.edge),
-					event.dt);
-			}
+			printf("%d %d %20ld     sample=0x%02x:%s   dt=%ld\n",	
+				event.channel, 
+				event.edge, 
+				event.time, 
+				event.sample,
+				sample_to_text(event.sample, event.time, event.edge),
+				event.dt);
+
 			previous_time = event.time;
 		}
 	}
