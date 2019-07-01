@@ -80,7 +80,7 @@ void pulser(int fd, int channel, int period, int pulse_length, int n_pulses)
 
 void run_pulser_test(int channel, int pulse_length, int n_pulses) {
 	// create test data
-	int fd = open("testdata.raw", O_CREAT | O_WRONLY | O_TRUNC);
+	int fd = open("testdata.raw", O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
 	printf("fd=%d\n",fd);
 	pulser(fd, channel, 10000001, pulse_length, n_pulses);
 	close(fd);
