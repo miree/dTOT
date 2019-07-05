@@ -1,0 +1,29 @@
+[*]
+[*] GTKWave Analyzer v3.3.94 (w)1999-2018 BSI
+[*] Fri Jul  5 14:01:33 2019
+[*]
+[dumpfile] "/home/michael/projects/dTOT/gateware/tests/tdc_clk_gen/simulation.ghw"
+[dumpfile_mtime] "Fri Jul  5 14:00:46 2019"
+[dumpfile_size] 292250
+[savefile] "/home/michael/projects/dTOT/gateware/tests/tdc_clk_gen/simulation.gtkw"
+[timestart] 113740000
+[size] 1000 600
+[pos] -1 -1
+*-24.000000 1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.testbench.
+[sst_width] 212
+[signals_width] 126
+[sst_expanded] 1
+[sst_vpaned_height] 149
+@28
+top.testbench.rst
+top.testbench.clk
+top.testbench.clk_quad_000
+top.testbench.clk_quad_090
+@29
+top.testbench.clk_quad_180
+@28
+top.testbench.clk_quad_270
+[pattern_trace] 1
+[pattern_trace] 0
