@@ -72,7 +72,7 @@ begin
 
   gen_input : process
   begin
-    wait for 15 us;
+    wait for 5 us;
     async_input(0) <= '1';
     wait for 12 ns;
     async_input(0) <= '0';

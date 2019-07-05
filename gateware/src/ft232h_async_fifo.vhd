@@ -25,6 +25,8 @@ end entity;
 
 architecture rtl of ft232h_async_fifo is
 
+  constant countdown_value : integer := 15;
+
   signal n_rxf_sync      : std_logic;
   signal n_txe_sync      : std_logic;
 
@@ -87,11 +89,11 @@ begin
             countdown <= countdown - 1;
           elsif n_rxf_sync = '0' then
             n_rd_o    <= '0';
-            countdown <= to_unsigned(15,4); 
+            countdown <= to_unsigned(countdown_value,4); 
             state     <= s_read;
             adbus_inout <= '1'; 
           elsif data_valid = '1' then
-            countdown <= to_unsigned(15,4); 
+            countdown <= to_unsigned(countdown_value,4); 
             state     <= s_write;
           end if;
         when s_read =>
@@ -103,18 +105,18 @@ begin
             --dataregister <= adbus_i;
             n_rd_o    <= '1';
             state     <= s_idle;
-            countdown <= to_unsigned(15,4);
+            countdown <= to_unsigned(countdown_value,4);
           end if;
         when s_write =>
           if countdown /= 0 then
             countdown <= countdown - 1;
-            if countdown = 14 then
+            if countdown = countdown_value-1 then
               adbus_o   <= dataregister;
             end if;
           elsif n_txe_sync = '0' then
             adbus_inout <= '0'; 
             n_wr_o    <= '0'; 
-            countdown <= to_unsigned(15,4); 
+            countdown <= to_unsigned(countdown_value,4); 
             state     <= s_done;
           end if; 
         when s_done =>
@@ -123,7 +125,7 @@ begin
           else 
             n_wr_o     <= '1';
             state      <= s_idle;
-            countdown  <= to_unsigned(15,4); 
+            countdown  <= to_unsigned(countdown_value,4); 
             data_valid <= '0';
           end if;
       end case;
