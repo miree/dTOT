@@ -1,0 +1,174 @@
+[*]
+[*] GTKWave Analyzer v3.3.94 (w)1999-2018 BSI
+[*] Fri Jul  5 16:24:53 2019
+[*]
+[dumpfile] "/home/michael/projects/dTOT/gateware/tests/tdc_top/simulation.ghw"
+[dumpfile_mtime] "Fri Jul  5 16:24:13 2019"
+[dumpfile_size] 1843856
+[savefile] "/home/michael/projects/dTOT/gateware/tests/tdc_top/simulation.gtkw"
+[timestart] 13510000000
+[size] 1598 770
+[pos] -1 -1
+*-31.000000 2898000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.testbench.
+[treeopen] top.testbench.dut.tdcs[0].
+[treeopen] top.testbench.dut.tdcs[0].tdc_instance.
+[treeopen] top.testbench.dut.tdcs[3].tdc_instance.
+[sst_width] 300
+[signals_width] 214
+[sst_expanded] 1
+[sst_vpaned_height] 208
+@28
+top.testbench.dut.clk_gen.clk12_i
+top.testbench.dut.rst
+top.testbench.async_input[0]
+top.testbench.dut.clk_quad_000
+top.testbench.dut.clk_quad_090
+top.testbench.dut.clk_quad_180
+top.testbench.dut.clk_quad_270
+@22
+#{top.testbench.input_data[7:0]} top.testbench.input_data[7] top.testbench.input_data[6] top.testbench.input_data[5] top.testbench.input_data[4] top.testbench.input_data[3] top.testbench.input_data[2] top.testbench.input_data[1] top.testbench.input_data[0]
+@28
+top.testbench.n_rxf_i
+@420
+top.testbench.dut.ft232h.state
+@c00028
+#{top.testbench.dut.ft232h.registers[63:0]} top.testbench.dut.ft232h.registers[63] top.testbench.dut.ft232h.registers[62] top.testbench.dut.ft232h.registers[61] top.testbench.dut.ft232h.registers[60] top.testbench.dut.ft232h.registers[59] top.testbench.dut.ft232h.registers[58] top.testbench.dut.ft232h.registers[57] top.testbench.dut.ft232h.registers[56] top.testbench.dut.ft232h.registers[55] top.testbench.dut.ft232h.registers[54] top.testbench.dut.ft232h.registers[53] top.testbench.dut.ft232h.registers[52] top.testbench.dut.ft232h.registers[51] top.testbench.dut.ft232h.registers[50] top.testbench.dut.ft232h.registers[49] top.testbench.dut.ft232h.registers[48] top.testbench.dut.ft232h.registers[47] top.testbench.dut.ft232h.registers[46] top.testbench.dut.ft232h.registers[45] top.testbench.dut.ft232h.registers[44] top.testbench.dut.ft232h.registers[43] top.testbench.dut.ft232h.registers[42] top.testbench.dut.ft232h.registers[41] top.testbench.dut.ft232h.registers[40] top.testbench.dut.ft232h.registers[39] top.testbench.dut.ft232h.registers[38] top.testbench.dut.ft232h.registers[37] top.testbench.dut.ft232h.registers[36] top.testbench.dut.ft232h.registers[35] top.testbench.dut.ft232h.registers[34] top.testbench.dut.ft232h.registers[33] top.testbench.dut.ft232h.registers[32] top.testbench.dut.ft232h.registers[31] top.testbench.dut.ft232h.registers[30] top.testbench.dut.ft232h.registers[29] top.testbench.dut.ft232h.registers[28] top.testbench.dut.ft232h.registers[27] top.testbench.dut.ft232h.registers[26] top.testbench.dut.ft232h.registers[25] top.testbench.dut.ft232h.registers[24] top.testbench.dut.ft232h.registers[23] top.testbench.dut.ft232h.registers[22] top.testbench.dut.ft232h.registers[21] top.testbench.dut.ft232h.registers[20] top.testbench.dut.ft232h.registers[19] top.testbench.dut.ft232h.registers[18] top.testbench.dut.ft232h.registers[17] top.testbench.dut.ft232h.registers[16] top.testbench.dut.ft232h.registers[15] top.testbench.dut.ft232h.registers[14] top.testbench.dut.ft232h.registers[13] top.testbench.dut.ft232h.registers[12] top.testbench.dut.ft232h.registers[11] top.testbench.dut.ft232h.registers[10] top.testbench.dut.ft232h.registers[9] top.testbench.dut.ft232h.registers[8] top.testbench.dut.ft232h.registers[7] top.testbench.dut.ft232h.registers[6] top.testbench.dut.ft232h.registers[5] top.testbench.dut.ft232h.registers[4] top.testbench.dut.ft232h.registers[3] top.testbench.dut.ft232h.registers[2] top.testbench.dut.ft232h.registers[1] top.testbench.dut.ft232h.registers[0]
+@28
+top.testbench.dut.ft232h.registers[63]
+top.testbench.dut.ft232h.registers[62]
+top.testbench.dut.ft232h.registers[61]
+top.testbench.dut.ft232h.registers[60]
+top.testbench.dut.ft232h.registers[59]
+top.testbench.dut.ft232h.registers[58]
+top.testbench.dut.ft232h.registers[57]
+top.testbench.dut.ft232h.registers[56]
+top.testbench.dut.ft232h.registers[55]
+top.testbench.dut.ft232h.registers[54]
+top.testbench.dut.ft232h.registers[53]
+top.testbench.dut.ft232h.registers[52]
+top.testbench.dut.ft232h.registers[51]
+top.testbench.dut.ft232h.registers[50]
+top.testbench.dut.ft232h.registers[49]
+top.testbench.dut.ft232h.registers[48]
+top.testbench.dut.ft232h.registers[47]
+top.testbench.dut.ft232h.registers[46]
+top.testbench.dut.ft232h.registers[45]
+top.testbench.dut.ft232h.registers[44]
+top.testbench.dut.ft232h.registers[43]
+top.testbench.dut.ft232h.registers[42]
+top.testbench.dut.ft232h.registers[41]
+top.testbench.dut.ft232h.registers[40]
+top.testbench.dut.ft232h.registers[39]
+top.testbench.dut.ft232h.registers[38]
+top.testbench.dut.ft232h.registers[37]
+top.testbench.dut.ft232h.registers[36]
+top.testbench.dut.ft232h.registers[35]
+top.testbench.dut.ft232h.registers[34]
+top.testbench.dut.ft232h.registers[33]
+top.testbench.dut.ft232h.registers[32]
+top.testbench.dut.ft232h.registers[31]
+top.testbench.dut.ft232h.registers[30]
+top.testbench.dut.ft232h.registers[29]
+top.testbench.dut.ft232h.registers[28]
+top.testbench.dut.ft232h.registers[27]
+top.testbench.dut.ft232h.registers[26]
+top.testbench.dut.ft232h.registers[25]
+top.testbench.dut.ft232h.registers[24]
+top.testbench.dut.ft232h.registers[23]
+top.testbench.dut.ft232h.registers[22]
+top.testbench.dut.ft232h.registers[21]
+top.testbench.dut.ft232h.registers[20]
+top.testbench.dut.ft232h.registers[19]
+top.testbench.dut.ft232h.registers[18]
+top.testbench.dut.ft232h.registers[17]
+top.testbench.dut.ft232h.registers[16]
+top.testbench.dut.ft232h.registers[15]
+top.testbench.dut.ft232h.registers[14]
+top.testbench.dut.ft232h.registers[13]
+top.testbench.dut.ft232h.registers[12]
+top.testbench.dut.ft232h.registers[11]
+top.testbench.dut.ft232h.registers[10]
+top.testbench.dut.ft232h.registers[9]
+top.testbench.dut.ft232h.registers[8]
+top.testbench.dut.ft232h.registers[7]
+top.testbench.dut.ft232h.registers[6]
+top.testbench.dut.ft232h.registers[5]
+top.testbench.dut.ft232h.registers[4]
+top.testbench.dut.ft232h.registers[3]
+top.testbench.dut.ft232h.registers[2]
+top.testbench.dut.ft232h.registers[1]
+top.testbench.dut.ft232h.registers[0]
+@1401200
+-group_end
+@28
+top.testbench.dut.n_rd_o
+top.testbench.dut.ft232h.adbus_inout
+@22
+#{top.testbench.dut.ft232h.adbus_o[7:0]} top.testbench.dut.ft232h.adbus_o[7] top.testbench.dut.ft232h.adbus_o[6] top.testbench.dut.ft232h.adbus_o[5] top.testbench.dut.ft232h.adbus_o[4] top.testbench.dut.ft232h.adbus_o[3] top.testbench.dut.ft232h.adbus_o[2] top.testbench.dut.ft232h.adbus_o[1] top.testbench.dut.ft232h.adbus_o[0]
+#{top.testbench.dut.ft232h.adbus_i[7:0]} top.testbench.dut.ft232h.adbus_i[7] top.testbench.dut.ft232h.adbus_i[6] top.testbench.dut.ft232h.adbus_i[5] top.testbench.dut.ft232h.adbus_i[4] top.testbench.dut.ft232h.adbus_i[3] top.testbench.dut.ft232h.adbus_i[2] top.testbench.dut.ft232h.adbus_i[1] top.testbench.dut.ft232h.adbus_i[0]
+#{top.testbench.dut.ft232h.registers_o[63:0]} top.testbench.dut.ft232h.registers_o[63] top.testbench.dut.ft232h.registers_o[62] top.testbench.dut.ft232h.registers_o[61] top.testbench.dut.ft232h.registers_o[60] top.testbench.dut.ft232h.registers_o[59] top.testbench.dut.ft232h.registers_o[58] top.testbench.dut.ft232h.registers_o[57] top.testbench.dut.ft232h.registers_o[56] top.testbench.dut.ft232h.registers_o[55] top.testbench.dut.ft232h.registers_o[54] top.testbench.dut.ft232h.registers_o[53] top.testbench.dut.ft232h.registers_o[52] top.testbench.dut.ft232h.registers_o[51] top.testbench.dut.ft232h.registers_o[50] top.testbench.dut.ft232h.registers_o[49] top.testbench.dut.ft232h.registers_o[48] top.testbench.dut.ft232h.registers_o[47] top.testbench.dut.ft232h.registers_o[46] top.testbench.dut.ft232h.registers_o[45] top.testbench.dut.ft232h.registers_o[44] top.testbench.dut.ft232h.registers_o[43] top.testbench.dut.ft232h.registers_o[42] top.testbench.dut.ft232h.registers_o[41] top.testbench.dut.ft232h.registers_o[40] top.testbench.dut.ft232h.registers_o[39] top.testbench.dut.ft232h.registers_o[38] top.testbench.dut.ft232h.registers_o[37] top.testbench.dut.ft232h.registers_o[36] top.testbench.dut.ft232h.registers_o[35] top.testbench.dut.ft232h.registers_o[34] top.testbench.dut.ft232h.registers_o[33] top.testbench.dut.ft232h.registers_o[32] top.testbench.dut.ft232h.registers_o[31] top.testbench.dut.ft232h.registers_o[30] top.testbench.dut.ft232h.registers_o[29] top.testbench.dut.ft232h.registers_o[28] top.testbench.dut.ft232h.registers_o[27] top.testbench.dut.ft232h.registers_o[26] top.testbench.dut.ft232h.registers_o[25] top.testbench.dut.ft232h.registers_o[24] top.testbench.dut.ft232h.registers_o[23] top.testbench.dut.ft232h.registers_o[22] top.testbench.dut.ft232h.registers_o[21] top.testbench.dut.ft232h.registers_o[20] top.testbench.dut.ft232h.registers_o[19] top.testbench.dut.ft232h.registers_o[18] top.testbench.dut.ft232h.registers_o[17] top.testbench.dut.ft232h.registers_o[16] top.testbench.dut.ft232h.registers_o[15] top.testbench.dut.ft232h.registers_o[14] top.testbench.dut.ft232h.registers_o[13] top.testbench.dut.ft232h.registers_o[12] top.testbench.dut.ft232h.registers_o[11] top.testbench.dut.ft232h.registers_o[10] top.testbench.dut.ft232h.registers_o[9] top.testbench.dut.ft232h.registers_o[8] top.testbench.dut.ft232h.registers_o[7] top.testbench.dut.ft232h.registers_o[6] top.testbench.dut.ft232h.registers_o[5] top.testbench.dut.ft232h.registers_o[4] top.testbench.dut.ft232h.registers_o[3] top.testbench.dut.ft232h.registers_o[2] top.testbench.dut.ft232h.registers_o[1] top.testbench.dut.ft232h.registers_o[0]
+@28
+top.testbench.dut.ft232h.n_oe_o
+top.testbench.dut.ft232h.n_txe_i
+top.testbench.dut.ft232h.n_rxf_i
+top.testbench.dut.ft232h.n_rd_o
+@22
+#{top.testbench.dut.ft232h.data_i[7:0]} top.testbench.dut.ft232h.data_i[7] top.testbench.dut.ft232h.data_i[6] top.testbench.dut.ft232h.data_i[5] top.testbench.dut.ft232h.data_i[4] top.testbench.dut.ft232h.data_i[3] top.testbench.dut.ft232h.data_i[2] top.testbench.dut.ft232h.data_i[1] top.testbench.dut.ft232h.data_i[0]
+#{top.testbench.dut.ft232h.adbus_o[7:0]} top.testbench.dut.ft232h.adbus_o[7] top.testbench.dut.ft232h.adbus_o[6] top.testbench.dut.ft232h.adbus_o[5] top.testbench.dut.ft232h.adbus_o[4] top.testbench.dut.ft232h.adbus_o[3] top.testbench.dut.ft232h.adbus_o[2] top.testbench.dut.ft232h.adbus_o[1] top.testbench.dut.ft232h.adbus_o[0]
+@28
+top.testbench.dut.tdcs[3].tdc_instance.async_i
+@22
+#{top.testbench.dut.tdcs[3].tdc_instance.sample[7:0]} top.testbench.dut.tdcs[3].tdc_instance.sample[7] top.testbench.dut.tdcs[3].tdc_instance.sample[6] top.testbench.dut.tdcs[3].tdc_instance.sample[5] top.testbench.dut.tdcs[3].tdc_instance.sample[4] top.testbench.dut.tdcs[3].tdc_instance.sample[3] top.testbench.dut.tdcs[3].tdc_instance.sample[2] top.testbench.dut.tdcs[3].tdc_instance.sample[1] top.testbench.dut.tdcs[3].tdc_instance.sample[0]
+@c00022
+#{top.testbench.dut.tdcs[3].tdc_instance.data_o[31:0]} top.testbench.dut.tdcs[3].tdc_instance.data_o[31] top.testbench.dut.tdcs[3].tdc_instance.data_o[30] top.testbench.dut.tdcs[3].tdc_instance.data_o[29] top.testbench.dut.tdcs[3].tdc_instance.data_o[28] top.testbench.dut.tdcs[3].tdc_instance.data_o[27] top.testbench.dut.tdcs[3].tdc_instance.data_o[26] top.testbench.dut.tdcs[3].tdc_instance.data_o[25] top.testbench.dut.tdcs[3].tdc_instance.data_o[24] top.testbench.dut.tdcs[3].tdc_instance.data_o[23] top.testbench.dut.tdcs[3].tdc_instance.data_o[22] top.testbench.dut.tdcs[3].tdc_instance.data_o[21] top.testbench.dut.tdcs[3].tdc_instance.data_o[20] top.testbench.dut.tdcs[3].tdc_instance.data_o[19] top.testbench.dut.tdcs[3].tdc_instance.data_o[18] top.testbench.dut.tdcs[3].tdc_instance.data_o[17] top.testbench.dut.tdcs[3].tdc_instance.data_o[16] top.testbench.dut.tdcs[3].tdc_instance.data_o[15] top.testbench.dut.tdcs[3].tdc_instance.data_o[14] top.testbench.dut.tdcs[3].tdc_instance.data_o[13] top.testbench.dut.tdcs[3].tdc_instance.data_o[12] top.testbench.dut.tdcs[3].tdc_instance.data_o[11] top.testbench.dut.tdcs[3].tdc_instance.data_o[10] top.testbench.dut.tdcs[3].tdc_instance.data_o[9] top.testbench.dut.tdcs[3].tdc_instance.data_o[8] top.testbench.dut.tdcs[3].tdc_instance.data_o[7] top.testbench.dut.tdcs[3].tdc_instance.data_o[6] top.testbench.dut.tdcs[3].tdc_instance.data_o[5] top.testbench.dut.tdcs[3].tdc_instance.data_o[4] top.testbench.dut.tdcs[3].tdc_instance.data_o[3] top.testbench.dut.tdcs[3].tdc_instance.data_o[2] top.testbench.dut.tdcs[3].tdc_instance.data_o[1] top.testbench.dut.tdcs[3].tdc_instance.data_o[0]
+@28
+top.testbench.dut.tdcs[3].tdc_instance.data_o[31]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[30]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[29]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[28]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[27]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[26]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[25]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[24]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[23]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[22]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[21]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[20]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[19]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[18]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[17]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[16]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[15]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[14]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[13]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[12]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[11]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[10]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[9]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[8]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[7]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[6]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[5]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[4]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[3]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[2]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[1]
+top.testbench.dut.tdcs[3].tdc_instance.data_o[0]
+@1401200
+-group_end
+@22
+#{top.testbench.adbus_io[7:0]} top.testbench.adbus_io[7] top.testbench.adbus_io[6] top.testbench.adbus_io[5] top.testbench.adbus_io[4] top.testbench.adbus_io[3] top.testbench.adbus_io[2] top.testbench.adbus_io[1] top.testbench.adbus_io[0]
+#{top.testbench.dut.ft232h.adbus_i[7:0]} top.testbench.dut.ft232h.adbus_i[7] top.testbench.dut.ft232h.adbus_i[6] top.testbench.dut.ft232h.adbus_i[5] top.testbench.dut.ft232h.adbus_i[4] top.testbench.dut.ft232h.adbus_i[3] top.testbench.dut.ft232h.adbus_i[2] top.testbench.dut.ft232h.adbus_i[1] top.testbench.dut.ft232h.adbus_i[0]
+@29
+#{top.testbench.dut.ft232h.adbus_o[7:0]} top.testbench.dut.ft232h.adbus_o[7] top.testbench.dut.ft232h.adbus_o[6] top.testbench.dut.ft232h.adbus_o[5] top.testbench.dut.ft232h.adbus_o[4] top.testbench.dut.ft232h.adbus_o[3] top.testbench.dut.ft232h.adbus_o[2] top.testbench.dut.ft232h.adbus_o[1] top.testbench.dut.ft232h.adbus_o[0]
+@28
+top.testbench.n_wr_o
+top.testbench.dut.ft232h.adbus_inout
+top.testbench.dut.tdcs[0].tdc_instance.async_i
+@22
+#{top.testbench.async_input[3:0]} top.testbench.async_input[3] top.testbench.async_input[2] top.testbench.async_input[1] top.testbench.async_input[0]
+#{top.testbench.input_data[7:0]} top.testbench.input_data[7] top.testbench.input_data[6] top.testbench.input_data[5] top.testbench.input_data[4] top.testbench.input_data[3] top.testbench.input_data[2] top.testbench.input_data[1] top.testbench.input_data[0]
+[pattern_trace] 1
+[pattern_trace] 0
