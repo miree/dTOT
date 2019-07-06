@@ -108,7 +108,7 @@ begin
 	-- reset generator
 	gen_rst: process
 	begin
-		wait until rising_edge(clk_i);
+		wait until rising_edge(clk_quad_000);
 		if rst = '1' then
 			rst_count <= rst_count + 1;
 		end if;
@@ -133,6 +133,9 @@ begin
 	begin 
 		tdc_reset(i) <= rst or not registers(60+i);
 		tdc_instance : entity work.tdc 
+		generic map (
+			data_buffer_depth => 12
+		)
 		port map (
 			rst_i      => tdc_reset(i),
 			clk_000_i  => clk_quad_000,
@@ -279,14 +282,14 @@ begin
 	threshold_value(2) <= unsigned(registers(35 downto 24));
 	threshold_value(3) <= unsigned(registers(47 downto 36));
 
---	-- negative volt generator, using an FPGA driven charge pump
---	--neg_gen: process
---	--begin
---	--	wait until rising_edge(clk_quad_000);
---	--	neg_volt_cnt <= neg_volt_cnt + 1;
---	--end process;
---	--neg_volt_osc_a <= (neg_volt_cnt(7), neg_volt_cnt(7), neg_volt_cnt(7));
---	--neg_volt_osc_b <= not (neg_volt_cnt(7), neg_volt_cnt(7), neg_volt_cnt(7));
+	-- negative volt generator, using an FPGA driven charge pump
+	neg_gen: process
+	begin
+		wait until rising_edge(clk_quad_000);
+		neg_volt_cnt <= neg_volt_cnt + 1;
+	end process;
+	neg_volt_osc_a <= (neg_volt_cnt(7), neg_volt_cnt(7), neg_volt_cnt(7));
+	neg_volt_osc_b <= not (neg_volt_cnt(7), neg_volt_cnt(7), neg_volt_cnt(7));
 
 	-- always enable the oscillator (for now)
 	osc_en <= '1';

@@ -1,0 +1,76 @@
+
+#Created by Constraints Editor (xc6slx9-tqg144-3) - 2019/01/03
+NET "clk_i" TNM_NET = clk_i;
+TIMESPEC TS_clk_i = PERIOD "clk_i" 12 MHz HIGH 50%;
+NET "clk_i" LOC = P56;
+
+# FTDI Sync FIFO interface
+NET "adbus_io<0>" LOC = P70;
+NET "adbus_io<1>" LOC = P64;
+NET "adbus_io<2>" LOC = P65;
+NET "adbus_io<3>" LOC = P38;
+NET "adbus_io<4>" LOC = P59;
+NET "adbus_io<5>" LOC = P58;
+NET "adbus_io<6>" LOC = P57;
+NET "adbus_io<7>" LOC = P51;
+NET "n_rxf_i"       LOC = P50;
+NET "n_txe_i"       LOC = P47;
+NET "n_rd_o"        LOC = P46;
+NET "n_wr_o"        LOC = P45;
+NET "n_siwu_o"      LOC = P44;
+NET "n_oe_o"        LOC = P43;
+
+#NET "async_input_n<0>"  LOC = P143 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+#NET "async_input_p<0>"  LOC = P144 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+
+#NET "async_input_n<1>"  LOC = P133 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+#NET "async_input_p<1>"  LOC = P134 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+
+#NET "async_input_n<2>"  LOC = P120 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+#NET "async_input_p<2>"  LOC = P121 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+
+#NET "async_input_n<3>"  LOC = P111 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+#NET "async_input_p<3>"  LOC = P112 | IOSTANDARD = LVDS_25 | DIFF_TERM = TRUE;
+
+NET "async_input_i<0>"  LOC = P144;
+NET "async_input_i<1>"  LOC = P134;
+NET "async_input_i<2>"  LOC = P121;
+NET "async_input_i<3>"  LOC = P112;
+
+#NET "async_input<4>"  LOC = P26;
+#NET "async_input<5>"  LOC = P23;
+#NET "async_input<6>"  LOC = P21;
+#NET "async_input<7>"  LOC = P16;
+#NET "async_input<8>"  LOC = P14;
+#NET "async_input<9>"  LOC = P11;
+#NET "async_input<10>" LOC = P9;
+#NET "async_input<11>" LOC = P7;
+#NET "async_input<12>" LOC = P5;
+#NET "async_input<13>" LOC = P1;
+#NET "async_input<14>" LOC = P143;
+#NET "async_input<15>" LOC = P141;
+
+NET "neg_volt_osc_a<0>" LOC = P97;
+NET "neg_volt_osc_a<1>" LOC = P98;
+NET "neg_volt_osc_a<2>" LOC = P99;
+
+NET "neg_volt_osc_b<0>" LOC = P100;
+NET "neg_volt_osc_b<1>" LOC = P101;
+NET "neg_volt_osc_b<2>" LOC = P102;
+
+NET "osc_en"            LOC = P35;
+
+NET "threshold_pwm_o<0>" LOC = P5;
+NET "threshold_pwm_o<1>" LOC = P6;
+NET "threshold_pwm_o<2>" LOC = P7;
+NET "threshold_pwm_o<3>" LOC = P8;
+
+NET "status_led_o<0>" LOC = P24;
+NET "status_led_o<1>" LOC = P26;
+NET "status_led_o<2>" LOC = P27;
+NET "status_led_o<3>" LOC = P29;
+
+NET "signal_led_o<0>" LOC = P30;
+NET "signal_led_o<1>" LOC = P32;
+NET "signal_led_o<2>" LOC = P33;
+NET "signal_led_o<3>" LOC = P34;
