@@ -8,6 +8,10 @@ use ieee.numeric_std.all;
 --use unisim.vcomponents.all;
 
 entity tdc_top is
+	generic (
+		data_buffer_depth  : natural := 12;
+		n_channels         : natural := 4
+	);
     port (  
 		clk_i     : in    std_logic; -- 12MHz
 		led_o     : out   std_logic;
@@ -44,7 +48,6 @@ end entity;
 
 architecture rtl of tdc_top is
 
-	constant n_channels          : natural := 4;
 	constant threshold_bit_width : natural := 12;
 	
 	signal async_input : std_logic_vector(n_channels-1 downto 0);
@@ -134,7 +137,7 @@ begin
 		tdc_reset(i) <= rst or not registers(60+i);
 		tdc_instance : entity work.tdc 
 		generic map (
-			data_buffer_depth => 12
+			data_buffer_depth => data_buffer_depth
 		)
 		port map (
 			rst_i      => tdc_reset(i),

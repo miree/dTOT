@@ -30,6 +30,9 @@ begin
 
   -- instantiate device under test (dut)
   dut : entity work.tdc_top
+    generic map (
+      data_buffer_depth => 4
+    )
     port map (
       clk_i         => clk,
       led_o         => led,
