@@ -54,3 +54,6 @@ gateware/syn/_xmsgs/
 gateware/syn/iseconfig/
 gateware/syn/xlnx_auto_0_xdb/
 gateware/syn/xst/
+
+theory_of_operation/simulations/dtot_amplitude
+theory_of_operation/simulations/dtot_shape
