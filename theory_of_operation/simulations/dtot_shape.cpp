@@ -120,9 +120,9 @@ double dynamic_threshold(double t, double t0, double threshold_low, double thres
 	}
 	return threshold_low + (1-exp(-(t-t0)/tau_threshold))*(threshold_high-threshold_low);
 }
-double t_trailing_edge(double tau, double RC, double threshold_low, double threshold_high, double tau_threshold, double trigger_delay = 0.5)
+double t_trailing_edge(double tau, double RC, double threshold_low, double threshold_high, double tau_threshold, double trigger_delay_leading, double trigger_delay_trailing)
 {
-	double t_leading = t_leading_edge(tau, RC, threshold_low)+trigger_delay;
+	double t_leading = t_leading_edge(tau, RC, threshold_low)+trigger_delay_leading;
 	double q_laeding = q_analytic(t_leading, tau, RC);
 
 	double tmax = q_tmax(tau, RC);
@@ -147,7 +147,7 @@ double t_trailing_edge(double tau, double RC, double threshold_low, double thres
 		double t_med = 0.5*(t_trailing_min+t_trailing_max);
 		//std::cout << t_med << std::endl;
 		if (t_trailing_max-t_trailing_min < 1e-9) {
-			return t_med+trigger_delay;
+			return t_med+trigger_delay_trailing;
 		}
 		if (log_q_analytic(t_med,tau,RC) <
 		       log(dynamic_threshold(t_med, t_leading, 
@@ -163,8 +163,8 @@ double t_trailing_edge(double tau, double RC, double threshold_low, double thres
 int main(int argc, char *argv[])
 {
 
-	if (argc != 7) {
-		std::cerr << "usage: " << argv[0] << " tau RC THmin THmax THtau trig_delay" << std::endl;
+	if (argc != 8) {
+		std::cerr << "usage: " << argv[0] << " tau RC THmin/THmax amplitude/THmax THtau trig_delay_leading trig_delay_trailing" << std::endl;
 		return 1;
 	}
 
@@ -176,21 +176,27 @@ int main(int argc, char *argv[])
 	double RC;
 	RC_in >> RC;
 	
-	std::istringstream THmin_in(argv[3]);
-	double THmin;
-	THmin_in >> THmin;
+	std::istringstream THmin_THmax_in(argv[3]);
+	double THmin_THmax;
+	THmin_THmax_in >> THmin_THmax;
 
-	std::istringstream THmax_in(argv[4]);
-	double THmax;
-	THmax_in >> THmax;
+	std::istringstream amplitude_THmax_in(argv[4]);
+	double amplitude_THmax;
+	amplitude_THmax_in >> amplitude_THmax;
+	double THmax = 1.0/amplitude_THmax;
+	double THmin = THmin_THmax*THmax;
 
 	std::istringstream THtau_in(argv[5]);
 	double THtau;
 	THtau_in >> THtau;
 
-	std::istringstream trig_delay_in(argv[6]);
-	double trig_delay;
-	trig_delay_in >> trig_delay;
+	std::istringstream trig_delay_leading_in(argv[6]);
+	double trig_delay_leading;
+	trig_delay_leading_in >> trig_delay_leading;
+
+	std::istringstream trig_delay_trailing_in(argv[7]);
+	double trig_delay_trailing;
+	trig_delay_trailing_in >> trig_delay_trailing;
 
 	double tmax = q_tmax(tau,RC);
 	double qmax = q_analytic(tmax,tau,RC);
@@ -199,18 +205,23 @@ int main(int argc, char *argv[])
 	std::cerr << "THmin = " << THmin << std::endl;
 	std::cerr << "THmax = " << THmax << std::endl;
 
-	double trigger_delay = trig_delay;
-	double t_leading=t_leading_edge(tau,RC,THmin)+trigger_delay;
-	double t_trailing=t_trailing_edge(tau,RC,THmin,THmax,THtau,trigger_delay);
+	double t_leading=t_leading_edge(tau,RC,THmin);
+	if (t_leading<0) {
+		std::cerr << "no solution, THmin must be smaller than amplitude" << std::endl;
+		return -1;
+	}
+	t_leading+=trig_delay_leading;
+	double t_trailing=t_trailing_edge(tau,RC,THmin,THmax,THtau,trig_delay_leading, trig_delay_trailing);
 
-	std::cerr << "#tmax       = " << tmax << std::endl;
-	std::cerr << "#qmax       = " << qmax << std::endl;
-	std::cerr << "#t_leading  = " << t_leading << std::endl;
-	std::cerr << "#q_tleading = " << q_analytic(t_leading,tau,RC) << std::endl;
-	std::cerr << "#t_trailing = " << t_trailing << std::endl;
-	std::cerr << "#q_trailing = " << q_analytic(t_trailing,tau,RC) << std::endl;
-	std::cerr << "#trig_delay = " << trig_delay << std::endl;
-	std::cerr << "DTOT        = " << t_trailing-t_leading << std::endl;
+	std::cerr << "#tmax                = " << tmax << std::endl;
+	std::cerr << "#qmax                = " << qmax << std::endl;
+	std::cerr << "#t_leading           = " << t_leading << std::endl;
+	std::cerr << "#q_tleading          = " << q_analytic(t_leading,tau,RC) << std::endl;
+	std::cerr << "#t_trailing          = " << t_trailing << std::endl;
+	std::cerr << "#q_trailing          = " << q_analytic(t_trailing,tau,RC) << std::endl;
+	std::cerr << "#trig_delay_leading  = " << trig_delay_leading << std::endl;
+	std::cerr << "#trig_delay_trailing = " << trig_delay_trailing << std::endl;
+	std::cerr << "DTOT                 = " << t_trailing-t_leading << std::endl;
 
 	int N = 1000;
 	for (int i = 0; i < N/10; ++i) {
@@ -218,7 +229,7 @@ int main(int argc, char *argv[])
 		std::cout << t << " " << 0 << " " << THmin << std::endl;
 	}	
 	for (int i = 0; i < N; ++i) {
-		double t = 3.0*i*t_trailing/N;
+		double t = 6.0*i*t_trailing/N;
 		std::cout << t << " " 
 		          << q_analytic(t,tau,RC) << " " 
 		          << dynamic_threshold_full(t,t_leading, t_trailing, THmin, THmax, THtau) << " "
